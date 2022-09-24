@@ -50,9 +50,33 @@ print(f'x new value is equal to {x} and its type is {type(x)}')
 # x[0] = 2 # <- Error - Can't assign new value
 # print(f'x new value is equal to {x} and its type is {type(x)}')
 
-# Using comprehension to create new tuples
-x = (i for i in x)
+# There is no comprehension method to create a new tuple
+x = (i for i in x) # <- creates an generator instead; note the () in lieu of []
 print(f'x new value is equal to {x} and its type is {type(x)}')
-print(next(x))
-print(next(x))
-print(next(x))
+# See https://bit.ly/3RbB7it
+
+# Turning a generator into a tuple using the tuple function
+x = tuple(x)
+print(f'x new value is equal to {x} and its type is {type(x)}')
+
+# Creating range objects; a type of sequence
+x = range(50)
+print(f'x new value is equal to {x} and its type is {type(x)}')
+
+# The actual numbers in the sequence are generated as the sequence gets
+# accessed
+print(f'x new value at position 5 is {x[5]}')
+
+# Creating dictionaries
+x = {
+    "The Mentalist":["Patrick Jane", "Cho", "Lisbon", "Van Pelt", "Rigsby"],
+    "Severance":["Mark", "Helly", "Peggy", "Ms. Casey"]
+}
+print(f'x new value is {x} and its type is {type(x)}')
+
+# Creating sets; sets itens may appear in different posision when called
+x = {"The Mentalist", 3}
+print(f'x new value is {x} and its type is {type(x)}')
+
+# Trying to access an specif entry by index
+# print(f'Value at position 0 is {type(x[0])}') # < - Error - Cant access position
