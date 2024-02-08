@@ -2,7 +2,7 @@
 x = 5
 
 # Use f and simple quotes (enclosing sentence) to interpolate variables inside
-# the to be printed message
+# the to-be-printed message
 print(f'x is equal to {x} and its type is {type(x)}')
 
 # Set new value of a different type to the variable;
@@ -14,7 +14,7 @@ print(f'x new value is equal to {x} and its type is {type(x)}')
 # Try to add variables of different data types
 # y = 5 + x # <- Error - can't have an str added to an int
 # y = 5 + y # <- Error - can't have an str added to an int
-# y = True + xError - can't have an str added to an boolean
+# y = True + x Error - can't have an str added to an boolean
 
 # Adding a boolean value to an int value
 x = 5
@@ -80,3 +80,7 @@ print(f'x new value is {x} and its type is {type(x)}')
 
 # Trying to access an specif entry by index
 # print(f'Value at position 0 is {type(x[0])}') # < - Error - Cant access position
+
+# Trying to store two equal values; Only one remains
+x = {"The Mentalist", 3, 3}
+print(f'x new value is {x} and its type is {type(x)}')
